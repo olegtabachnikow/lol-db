@@ -1,6 +1,6 @@
 # League of Legends DB
 
-This project is my pet project used only for practice nad fun.
+This project is my pet project used only for practice and fun.
 I discovered before, that Riot Games have an awesome API and this is a core of this project.
 [Visit website](https://lol-db-tau.vercel.app/).
 
