@@ -1,0 +1,55 @@
+.skill-button {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid transparent;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+.skill-button img {
+  -webkit-user-drag: none;
+}
+.skill-button_active {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.skill-button_active::before {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 25%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  border-left: 2px solid #fff;
+  border-top: 2px solid #fff;
+  animation: skillBorders 0.3s linear forwards;
+}
+.skill-button_active::after {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 25%;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  animation: skillBorders 0.3s linear forwards;
+}
+
+.skill-button:hover {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+@keyframes skillBorders {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  100% {
+    width: 40%;
+    height: 20%;
+  }
+}

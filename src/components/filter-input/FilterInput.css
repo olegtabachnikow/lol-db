@@ -1,0 +1,33 @@
+.filter-label {
+  display: flex;
+  height: 60%;
+  transition: height 0.3s linear;
+}
+.filter-icon {
+  width: 20px;
+  transition: transform 0.3s linear;
+}
+.filter-label:hover,
+.filter-label:focus {
+  height: 100%;
+}
+.filter-label:hover .filter-icon {
+  transform: translateX(-10px);
+}
+.filter-input {
+  width: 100%;
+  padding: 10px 15px;
+  outline: none;
+  border: none;
+  border-right: 1px solid rgb(208, 168, 92);
+  border-radius: 0px;
+}
+.filter-input::placeholder {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+@media screen and (max-width: 1000px) {
+  .filter-label {
+    width: 30%;
+  }
+}

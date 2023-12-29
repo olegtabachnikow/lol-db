@@ -1,0 +1,327 @@
+.class-icon {
+  width: 40px;
+  margin-bottom: 10px;
+  -webkit-user-drag: none;
+}
+.champion-info {
+  overflow: hidden;
+}
+.champion-card {
+  position: relative;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  max-height: 80vh;
+  max-width: 90%;
+  overflow: hidden;
+  z-index: 2;
+}
+.champion-background {
+  filter: blur(5px);
+  opacity: 0.5;
+  min-width: 100vw;
+  min-height: 90vh;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  top: 0;
+  left: 0;
+}
+.champion-background::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 9, 25, 0) 50%,
+    rgba(0, 9, 19, 1) 100%
+  );
+}
+.champion-page {
+  max-width: 98%;
+  margin: 0 auto;
+  color: #fff;
+  padding-top: 90px;
+}
+.champion-info__skins-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  max-width: 30%;
+  width: 100%;
+  backdrop-filter: blur(3px);
+  overflow: hidden;
+}
+.champion-card__image {
+  width: 100%;
+}
+.champion-info__available-skins {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  padding: 0 5px 40px 0;
+  margin: 0 20px;
+  height: 75%;
+  box-sizing: border-box;
+  border-top: 1px rgba(255, 255, 255, 0.4) solid;
+  border-bottom: 1px rgba(255, 255, 255, 0.4) solid;
+}
+.champion-info__skins-title {
+  color: #fff;
+  font-size: 30px;
+  cursor: default;
+  display: flex;
+  align-items: center;
+  user-select: none;
+  margin: 0 0 0 20px;
+  box-sizing: border-box;
+  height: 15%;
+}
+.champion-info__available-skins::-webkit-scrollbar {
+  display: none;
+}
+.champion-info__skin {
+  color: rgba(255, 255, 255, 0.3);
+  min-height: 70px;
+  padding: 5px 5px 5px 80px;
+  font-size: 20px;
+  background-color: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  position: relative;
+  margin-top: 30px;
+  transition: color 0.3s linear;
+}
+.champion-info__skin-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-5px, -5px);
+  -webkit-user-drag: none;
+}
+.champion-info__skin_active {
+  position: relative;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s linear;
+}
+.champion-info__skin_active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  border-left: 2px solid #fff;
+  border-top: 2px solid #fff;
+  animation: borders 0.3s linear forwards;
+}
+.champion-info__skin_active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  animation: borders 0.3s linear forwards;
+}
+.champion-info__skin:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+.champion-info__skin_active:hover {
+  color: #fff;
+}
+.champion-role-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60px;
+  margin-left: 30px;
+}
+.champion-role-container:first-child {
+  margin-left: 0;
+}
+.champion-page__preloader-overlay {
+  width: 110%;
+  height: 100vh;
+  top: 0;
+  left: -5%;
+  position: fixed;
+  z-index: 10;
+  background-color: rgb(0, 9, 19);
+}
+.champion-titles {
+  margin-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+  user-select: none;
+  font-style: italic;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.champion__title {
+  font-size: 90px;
+  line-height: 90px;
+  margin: 0;
+  text-transform: uppercase;
+  z-index: 2;
+  position: relative;
+}
+.champion__subtitle {
+  margin: 5px 0;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+}
+.champion-character-description {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.champion-character-description__text {
+  max-width: 40%;
+  padding: 5%;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  align-self: center;
+}
+.champion-skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  padding: 5%;
+}
+.skills__description {
+  min-height: 100px;
+}
+.champion-roles-box {
+  display: flex;
+  margin-bottom: 20px;
+  flex-direction: row;
+}
+.champion-difficulty__graph {
+  opacity: 0.2;
+  width: 30px;
+  height: 20px;
+  transform: skew(40deg);
+  background-color: rgb(8, 215, 247);
+}
+.champion-difficulty__graph_active {
+  opacity: 1;
+}
+.champion-text {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  line-height: 20px;
+}
+.champion-text_yellow {
+  color: rgb(208, 168, 92);
+}
+.champion-difficulty__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.champion-difficulty__graph-box {
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+  margin-bottom: 1rem;
+}
+.champion-stats-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+.champion-page__button {
+  position: absolute !important;
+  top: 4%;
+  right: 2%;
+  font-size: 0.8rem;
+}
+@keyframes borders {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  100% {
+    width: 30%;
+    height: 40%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .champion-page {
+    max-width: 100%;
+  }
+  .champion-card {
+    max-width: 100%;
+    width: 100%;
+  }
+  .champion-info__skins-container {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    background-color: transparent;
+    max-width: 100%;
+    padding-bottom: 5px;
+    height: auto;
+  }
+  .champion-info__skins-title {
+    width: 90%;
+    margin: 2px 20px;
+  }
+  .champion-info__available-skins {
+    flex-direction: row;
+    padding: 5px 0;
+  }
+  .champion-info__skin {
+    font-size: 0px;
+    min-width: 72px;
+    min-height: 72px;
+    margin: 10px 10px;
+    padding: 0;
+    box-sizing: content-box;
+  }
+  .champion-info__skin-image {
+    transform: translate(-4px, -4px);
+  }
+}
+@media screen and (max-width: 600px) {
+  .champion-card {
+    max-width: 100%;
+    width: 100%;
+  }
+  .champion-card__image {
+    height: 60vh;
+    object-fit: cover;
+    object-position: 70%;
+  }
+  .champion-character-description {
+    flex-direction: column;
+  }
+  .champion__title {
+    font-size: 70px;
+  }
+  .champion-character-description__text {
+    max-width: 90%;
+    border-left: none;
+    padding: 5% 0;
+    z-index: 5;
+  }
+  .champion-skills {
+    width: 90%;
+  }
+  .skills__description {
+    min-height: auto;
+  }
+}

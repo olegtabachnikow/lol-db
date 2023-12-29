@@ -1,0 +1,24 @@
+@import url(./vendor/normalize.css);
+
+@font-face {
+  font-family: "BeaufortforLOL-Bold";
+  src: url("./vendor/fonts/LolBold/12420e8c141ca7c3dff41de2d59df13e.eot");
+  src: url("./vendor/fonts/LolBold/12420e8c141ca7c3dff41de2d59df13e.eot?#iefix")
+      format("embedded-opentype"),
+    url("./vendor/fonts/LolBold/12420e8c141ca7c3dff41de2d59df13e.woff2")
+      format("woff2"),
+    url("./vendor/fonts/LolBold/12420e8c141ca7c3dff41de2d59df13e.woff")
+      format("woff"),
+    url("./vendor/fonts/LolBold/12420e8c141ca7c3dff41de2d59df13e.ttf")
+      format("truetype"),
+    url("./vendor/fonts/LolBold/12420e8c141ca7c3dff41de2d59df13e.svg")
+      format("svg");
+}
+body {
+  margin: 0;
+  font-family: "BeaufortforLOL-Bold", -apple-system, BlinkMacSystemFont,
+    "BeaufortforLOL-Bold", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

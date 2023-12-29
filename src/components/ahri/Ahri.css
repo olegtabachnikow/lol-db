@@ -1,0 +1,255 @@
+.ahri__subtitle_active {
+  transform: translateY(-150px);
+  opacity: 0;
+}
+.ahri__image {
+  width: 200px;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1));
+  transform: translateY(120%);
+  transition: all 1s cubic-bezier(0.37, 0.37, 0.28, 1);
+  object-fit: contain;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  user-select: none;
+  z-index: 1;
+}
+.ahri__image_active {
+  transform: translateY(30%);
+}
+.ahri__orb-container {
+  width: 120px;
+  position: absolute;
+  cursor: pointer;
+  transition: all 2s cubic-bezier(0, 1.15, 0.82, 1.13);
+  bottom: 40%;
+  user-select: none;
+  z-index: 1;
+}
+.ahri__crystal-orb {
+  width: 100%;
+  aspect-ratio: 1/1;
+  -webkit-user-drag: none;
+}
+.ahri__crystal-orb_moved {
+  width: 70px;
+  animation: rotateOrb 0.3s linear infinite;
+}
+.ahri__orb-container:hover {
+  filter: drop-shadow(0 0 15px rgb(10, 10, 227));
+}
+.ahri__orb-container_active {
+  animation: rotateOrb 0.3s linear infinite;
+  width: 70px;
+  bottom: 7%;
+}
+.ahri__orb-container_moved {
+  animation: flyToTopOrb 3s linear forwards;
+}
+.ahri__orb-container_hidden {
+  display: none;
+}
+.ahri__container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ahri__char-box {
+  width: 100%;
+  max-width: 450px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+}
+.ahri__subtitle {
+  color: #fff;
+  transition: all 0.5s linear;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-style: italic;
+}
+.ahri__tail-box {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: 0;
+  justify-content: center;
+  z-index: 0;
+  transform: translateY(120%) translateX(-10%);
+  transition: all 1s cubic-bezier(0.37, 0.37, 0.28, 1);
+}
+.ahri__tail-box_active {
+  transform: translateY(0) translateX(-10%);
+}
+.ahri__tail {
+  position: absolute;
+  transition: all 0.3s linear;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  max-height: 300px;
+  transition: all 1s cubic-bezier(0.37, 0.37, 0.28, 1.5);
+  -webkit-user-drag: none;
+}
+.ahri__tail:hover {
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1));
+}
+.ahri__tail-1 {
+  transform: translateX(20%) translateY(20%) rotate(120deg);
+}
+.ahri__tail-2 {
+  transform: translateX(15%) translateY(10%) rotate(100deg);
+}
+.ahri__tail-3 {
+  transform: translateX(5%) rotate(80deg);
+}
+.ahri__tail-4 {
+  transform: translateX(-15%) translateY(-5%) rotate(50deg);
+}
+.ahri__tail-5 {
+  transform: translateX(-40%) translateY(-5%) rotate(30deg);
+}
+.ahri__tail-6 {
+  transform: translateX(-65%) translateY(5%) rotate(10deg);
+}
+.ahri__tail-7 {
+  transform: translateX(-90%) translateY(20%) rotate(-5deg);
+}
+.ahri__tail-8 {
+  transform: translateX(-90%) translateY(35%) rotate(-30deg);
+}
+.ahri__tail-9 {
+  transform: translateX(-80%) translateY(50%) rotate(-50deg);
+}
+.ahri__mouth {
+  width: 15px;
+  height: 0;
+  background-color: rgb(68, 5, 5);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 25.5%;
+  left: 48%;
+  z-index: 3;
+  transform: rotate(-10deg);
+}
+.ahri__mouth_active {
+  animation: mouthMove 0.5s linear 0.5s infinite;
+}
+.ahri__mouth_not-animated {
+  animation: none;
+}
+.ahri__intro-text {
+  padding: 24px;
+  margin: 0;
+  font-size: 14px;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.5s linear 1s;
+}
+.ahri__intro-text_active {
+  width: auto;
+  height: auto;
+  opacity: 1;
+}
+.ahri__intro-text-container {
+  position: absolute;
+  width: 120px;
+  height: 100px;
+  transform: translateY(30px);
+  opacity: 0;
+  border-radius: 40px;
+  background-color: #fff;
+  transition: all 0.5s linear;
+}
+.ahri__intro-text-container:before {
+  content: '';
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 24px solid #fff;
+  border-right: 12px solid transparent;
+  border-top: 12px solid #fff;
+  border-bottom: 24px solid transparent;
+  right: 45%;
+  bottom: -24px;
+}
+.ahri__intro-text-container_active {
+  width: 400px;
+  transform: translateY(0);
+  opacity: 1;
+}
+.ahri__intro-text-container_moved {
+  transform: translateX(200%);
+  opacity: 0;
+}
+.ahri__nav-button {
+  margin-top: 30px;
+}
+@keyframes mouthMove {
+  0% {
+    height: 0;
+    transform: translateY(-5px) rotate(-7deg);
+  }
+  50% {
+    height: 10px;
+    transform: translateY(0) rotate(-7deg);
+  }
+  100% {
+    height: 0;
+    transform: translateY(-5px) rotate(-7deg);
+  }
+}
+@keyframes rotateOrb {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes flyToTopOrb {
+  0% {
+    bottom: 7%;
+    width: 70px;
+  }
+  25% {
+    bottom: 40%;
+    width: 220px;
+  }
+  50% {
+    bottom: 50%;
+    width: 220px;
+  }
+  75% {
+    bottom: 60%;
+    width: 220px;
+    transform: rotate(810deg);
+  }
+  90% {
+    bottom: 65%;
+    width: 220px;
+    transform: rotate(810deg);
+  }
+  100% {
+    bottom: -100%;
+    width: 70px;
+    transform: rotate(810deg);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .ahri__nav-button_inner {
+    width: calc(100% - 2px);
+    height: 58px;
+  }
+  .ahri__nav-button {
+    width: 60%;
+    height: 60px;
+  }
+}

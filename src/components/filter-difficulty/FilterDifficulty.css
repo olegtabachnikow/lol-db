@@ -1,0 +1,49 @@
+.filter-difficulty {
+  height: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  width: 20%;
+}
+
+.filter-difficulty__button {
+  cursor: pointer;
+  padding: 0 0 0 20px;
+  background-color: transparent;
+  border: none;
+  border-left: 1px solid rgb(208, 168, 92);
+  height: 60%;
+  width: 100%;
+  transition: height 0.3s linear;
+}
+.filter-difficulty__button:hover {
+  height: 100%;
+}
+.filter-difficulty__list {
+  list-style: none;
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  left: 0;
+  top: 100%;
+  padding: 0;
+  z-index: 10;
+  width: calc(100% + 41px);
+  margin: 0;
+  background-color: #fff;
+  box-sizing: border-box;
+  border: 1px solid rgb(208, 168, 92);
+}
+.filter-difficulty__list_active {
+  display: flex;
+}
+@media screen and (max-width: 1000px) {
+  .filter-difficulty {
+    width: 30%;
+    font-size: 0.8rem;
+  }
+  .filter-difficulty__button,
+  .filter-difficulty__list {
+    color: rgba(0, 0, 0, 0.6);
+  }
+}

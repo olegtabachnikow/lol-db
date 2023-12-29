@@ -1,0 +1,13 @@
+.item-cost {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+.item-cost__text {
+  color: #c9aa71;
+  display: flex;
+  align-items: center;
+}
+.item-cost__image {
+  margin-left: 5px;
+}

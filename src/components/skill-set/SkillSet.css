@@ -1,0 +1,9 @@
+.skillset {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    column-gap: 5%;
+    border-bottom: 1px solid rgba(255,255,255, .3);
+    border-top: 1px solid rgba(255,255,255, .3);
+    padding: 20px 0;
+}
